@@ -12,7 +12,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 # --- ایجاد اپ Flask برای رندر (در صورت نیاز به وب‌هوک) ---
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -42,7 +42,7 @@ def main():
     telegram_app.run_polling()
 
 # --- اجرای برنامه ---
-if name == "main":
+if __name___ == "__main__":
     import threading
     import os
 
@@ -51,4 +51,5 @@ if name == "main":
 
     # اجرای Flask برای رندر (پورت باید مشخص باشه)
     port = int(os.environ.get("PORT", 10000))  # ← اینجا پورت 10000 تنظیم شده
+
     app.run(host="0.0.0.0", port=port)
