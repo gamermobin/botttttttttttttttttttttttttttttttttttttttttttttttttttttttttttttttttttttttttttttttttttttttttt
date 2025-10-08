@@ -42,7 +42,7 @@ def main():
     telegram_app.run_polling()
 
 # --- اجرای برنامه ---
-if __name___ == "__main__":
+if __name__ == "__main__":
     import threading
     import os
 
@@ -53,3 +53,4 @@ if __name___ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # ← اینجا پورت 10000 تنظیم شده
 
     app.run(host="0.0.0.0", port=port)
+
